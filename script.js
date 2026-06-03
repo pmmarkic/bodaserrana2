@@ -1,23 +1,66 @@
+const ACCESS_PASSWORD = "fernetazo";
 
-const ACCESS_PASSWORD='fernetazo';
 function validatePassword(){
- if(document.getElementById('passwordInput').value===ACCESS_PASSWORD){
- document.getElementById('accessScreen').style.display='none';
- }
+
+    const value =
+    document.getElementById("passwordInput").value;
+
+    if(value === ACCESS_PASSWORD){
+
+        document
+        .getElementById("accessScreen")
+        .style.display = "none";
+
+        document
+        .getElementById("weddingMusic")
+        .play();
+
+    }else{
+
+        alert("Clave incorrecta");
+
+    }
 }
-const music=document.getElementById('weddingMusic');
-document.getElementById('musicBtn').onclick=()=>music.paused?music.play():music.pause();
 
-const target=new Date('2026-10-10T18:00:00');
-setInterval(()=>{
- const d=target-new Date();
- const days=Math.floor(d/86400000);
- const h=Math.floor((d%86400000)/3600000);
- const m=Math.floor((d%3600000)/60000);
- document.getElementById('timer').innerHTML=`${days} días · ${h} hs · ${m} min`;
-},1000);
+const targetDate =
+new Date("2026-10-10T18:00:00");
 
-const obs=new IntersectionObserver(entries=>{
- entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active');});
-});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function updateCountdown(){
+
+    const now = new Date();
+
+    const diff =
+    targetDate - now;
+
+    if(diff <= 0) return;
+
+    const days =
+    Math.floor(diff/(1000*60*60*24));
+
+    const hours =
+    Math.floor(
+    diff%(1000*60*60*24)
+    /(1000*60*60));
+
+    const minutes =
+    Math.floor(
+    diff%(1000*60*60)
+    /(1000*60));
+
+    const seconds =
+    Math.floor(
+    diff%(1000*60)
+    /1000);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+}
+
+updateCountdown();
+
+setInterval(
+updateCountdown,
+1000
+);
