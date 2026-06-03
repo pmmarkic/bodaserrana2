@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mariana Ailin & Pablo Matias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="accessScreen" class="access-screen">
+  <div class="access-card">
+    <h2>Invitación Privada</h2>
+    <input id="passwordInput" type="password" placeholder="Clave">
+    <button onclick="validatePassword()">Ingresar</button>
+  </div>
+</div>
+
+<audio id="weddingMusic" loop>
+<source src="musica-boda.MP3" type="audio/mpeg">
+</audio>
+
+<header class="hero">
+<div class="hero-overlay"></div>
+<div class="hero-content reveal">
+<h1>Mariana Ailin & Pablo Matias</h1>
+<p>10 de Octubre de 2026 · 18:00 hs</p>
+<button id="musicBtn">🎵 Música</button>
+</div>
+</header>
+
+<section class="countdown reveal">
+<h2>Cuenta Regresiva</h2>
+<div id="timer"></div>
+</section>
+
+<section class="cards reveal">
+<div class="card">
+<h3>📍 Ceremonia</h3>
+<p>Av. Perito Moreno 1760 · Villa Carlos Paz</p>
+<a class="btn" href="https://maps.app.goo.gl/qtxSwoMXrxTWdYDj7" target="_blank">Cómo llegar</a>
+</div>
+<div class="card">
+<h3>🎵 Playlist</h3>
+<a class="btn" target="_blank" href="https://open.spotify.com/playlist/7vgeaLq7H23qs4Ox2wvUUm?si=0b336a9dcc3f402c">Agregar canciones</a>
+</div>
+</section>
+
+<section class="gallery reveal">
+<h2>Nuestra Historia</h2>
+<div class="gallery-grid">
+<img src="https://lh3.googleusercontent.com/u/0/d/1tlT2ReeNAS4ieb19Jm00QGtyBEhDEQuM">
+<img src="https://lh3.googleusercontent.com/u/0/d/1Xav2XoKtBzSUgpURQbCxooRS-NU0jbYJ">
+<img src="https://lh3.googleusercontent.com/u/0/d/14l18yZX0dpCWRDkcm9eJUmriloBrUOlh">
+<img src="https://lh3.googleusercontent.com/u/0/d/1S7YECUH7Z2UefnnjJAvKKb1yDBs0csIs">
+</div>
+</section>
+
+<section class="timeline reveal">
+<h2>Nuestro Camino</h2>
+<div class="timeline-item">💕 Nos conocimos</div>
+<div class="timeline-item">💍 Nos comprometimos</div>
+<div class="timeline-item">🥂 Nos casamos</div>
+</section>
+
+<section class="cards reveal">
+<div class="card">
+<h3>🎁 Luna de Miel</h3>
+<p>Alias: <b>bodayfernet</b></p>
+</div>
+<div class="card">
+<h3>✓ Confirmación</h3>
+<a class="btn" href="https://forms.gle/sYidah81RkVCP72d6" target="_blank">Confirmar asistencia</a>
+</div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
