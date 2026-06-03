@@ -1,81 +1,203 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Mariana Ailin & Pablo Matias</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<div id="accessScreen" class="access-screen">
-  <div class="access-card">
-    <h2>Invitación Privada</h2>
-    <input id="passwordInput" type="password" placeholder="Clave">
-    <button onclick="validatePassword()">Ingresar</button>
-  </div>
+<div id="accessScreen">
+
+    <div class="access-card">
+
+        <h2>Invitación Privada</h2>
+
+        <input
+            type="password"
+            id="passwordInput"
+            placeholder="Ingrese la clave">
+
+        <button onclick="validatePassword()">
+            Ingresar
+        </button>
+
+    </div>
+
 </div>
 
 <audio id="weddingMusic" loop>
-<source src="musica-boda.MP3" type="audio/mpeg">
+    <source src="musica-boda.MP3" type="audio/mpeg">
 </audio>
 
-<header class="hero">
-<div class="hero-overlay"></div>
-<div class="hero-content reveal">
-<h1>Mariana Ailin & Pablo Matias</h1>
-<p>10 de Octubre de 2026 · 18:00 hs</p>
-<button id="musicBtn">🎵 Música</button>
-</div>
-</header>
+<section class="hero">
 
-<section class="countdown reveal">
-<h2>Cuenta Regresiva</h2>
-<div id="timer"></div>
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <span class="date">
+            10 Octubre 2026
+        </span>
+
+        <h1>
+            Mariana Ailin
+            <br>
+            &
+            <br>
+            Pablo Matias
+        </h1>
+
+        <p>
+            Nos Casamos
+        </p>
+
+    </div>
+
 </section>
 
-<section class="cards reveal">
-<div class="card">
-<h3>📍 Ceremonia</h3>
-<p>Av. Perito Moreno 1760 · Villa Carlos Paz</p>
-<a class="btn" href="https://maps.app.goo.gl/qtxSwoMXrxTWdYDj7" target="_blank">Cómo llegar</a>
-</div>
-<div class="card">
-<h3>🎵 Playlist</h3>
-<a class="btn" target="_blank" href="https://open.spotify.com/playlist/7vgeaLq7H23qs4Ox2wvUUm?si=0b336a9dcc3f402c">Agregar canciones</a>
-</div>
+<section class="countdown-section">
+
+    <h2>Faltan...</h2>
+
+    <div class="countdown">
+
+        <div class="time-box">
+            <span id="days">0</span>
+            Días
+        </div>
+
+        <div class="time-box">
+            <span id="hours">0</span>
+            Horas
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">0</span>
+            Minutos
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">0</span>
+            Segundos
+        </div>
+
+    </div>
+
 </section>
 
-<section class="gallery reveal">
-<h2>Nuestra Historia</h2>
-<div class="gallery-grid">
-<img src="https://lh3.googleusercontent.com/u/0/d/1tlT2ReeNAS4ieb19Jm00QGtyBEhDEQuM">
-<img src="https://lh3.googleusercontent.com/u/0/d/1Xav2XoKtBzSUgpURQbCxooRS-NU0jbYJ">
-<img src="https://lh3.googleusercontent.com/u/0/d/14l18yZX0dpCWRDkcm9eJUmriloBrUOlh">
-<img src="https://lh3.googleusercontent.com/u/0/d/1S7YECUH7Z2UefnnjJAvKKb1yDBs0csIs">
-</div>
+<section class="event-section">
+
+    <h2>Ceremonia & Fiesta</h2>
+
+    <p>
+        10 de Octubre de 2026
+        <br><br>
+        18:00 hs
+        <br><br>
+        Av. Perito Moreno 1760
+        <br>
+        Villa Carlos Paz
+    </p>
+
+    <a
+        href="https://maps.app.goo.gl/qtxSwoMXrxTWdYDj7"
+        target="_blank"
+        class="btn">
+
+        Cómo llegar
+
+    </a>
+
 </section>
 
-<section class="timeline reveal">
-<h2>Nuestro Camino</h2>
-<div class="timeline-item">💕 Nos conocimos</div>
-<div class="timeline-item">💍 Nos comprometimos</div>
-<div class="timeline-item">🥂 Nos casamos</div>
+<section class="gallery">
+
+    <h2>Nuestra Historia</h2>
+
+    <div class="gallery-grid">
+
+        <img src="https://lh3.googleusercontent.com/u/0/d/1tlT2ReeNAS4ieb19Jm00QGtyBEhDEQuM">
+
+        <img src="https://lh3.googleusercontent.com/u/0/d/1Xav2XoKtBzSUgpURQbCxooRS-NU0jbYJ">
+
+        <img src="https://lh3.googleusercontent.com/u/0/d/14l18yZX0dpCWRDkcm9eJUmriloBrUOlh">
+
+        <img src="https://lh3.googleusercontent.com/u/0/d/1S7YECUH7Z2UefnnjJAvKKb1yDBs0csIs">
+
+        <img src="https://lh3.googleusercontent.com/u/0/d/1TF802gaYDxQzyCLz83NycMSWmiCbv4ka">
+
+        <img src="https://lh3.googleusercontent.com/u/0/d/1kQ39Vy7_4fz64xyDnOUp9gwQXQjNG0AB">
+
+    </div>
+
 </section>
 
-<section class="cards reveal">
-<div class="card">
-<h3>🎁 Luna de Miel</h3>
-<p>Alias: <b>bodayfernet</b></p>
-</div>
-<div class="card">
-<h3>✓ Confirmación</h3>
-<a class="btn" href="https://forms.gle/sYidah81RkVCP72d6" target="_blank">Confirmar asistencia</a>
-</div>
+<section class="spotify">
+
+    <h2>Playlist Colaborativa</h2>
+
+    <a
+        href="https://open.spotify.com/playlist/7vgeaLq7H23qs4Ox2wvUUm?si=0b336a9dcc3f402c"
+        target="_blank"
+        class="btn">
+
+        Agregar canciones
+
+    </a>
+
 </section>
 
-<script src="script.js"></script>
+<section class="gift">
+
+    <h2>Luna de Miel</h2>
+
+    <p>
+
+        Alias:
+
+        <strong>bodayfernet</strong>
+
+        <br><br>
+
+        Mariana Ailin Limarino
+
+    </p>
+
+</section>
+
+<section class="rsvp">
+
+    <h2>Confirmación</h2>
+
+    <a
+        href="https://forms.gle/sYidah81RkVCP72d6"
+        target="_blank"
+        class="btn">
+
+        Confirmar asistencia
+
+    </a>
+
+</section>
+
+<footer>
+
+    Mariana Ailin & Pablo Matias
+
+</footer>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
